@@ -52,6 +52,18 @@ public class App {
         System.out.println("Length are not equal");
 
          System.out.println("***********************************************************");
+ 
+        //   Compare the two lines  > , < or == 
+        
+        if(dis1==dis2) {
+            System.out.println("Are Equal");
+        }
+        else if (dis1 > dis2){
+            System.out.println("Line 1 is greater than line 2");
+        }
+        else{
+            System.out.println("Line 1 is smaller than line 2 ");
+        }
 
     }
 }
