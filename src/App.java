@@ -19,8 +19,11 @@ class Point{
 
      }
 
-     boolean isEqualTwoLine(double dis1,double dis2){
+     boolean isEqual(double dis1,double dis2){
          return dis1==dis2 ;
+     }
+     double compare(double dis1,double dis2){
+        return dis1- dis2 ;
      }
 
 }
@@ -40,12 +43,12 @@ public class App {
         // Check the Two lines are equal or not 
         
         Point p3 = new Point(1, 2) ;
-        Point p4= new Point(4, 5) ;
+        Point p4= new Point(4, 6) ;
 
         double dis2 = p2.distanceBetweenTwoPoints(p3, p4) ;
         System.out.println("Distance between given two point is "+dis2); 
         
-        if(p1.isEqualTwoLine(dis1, dis2)){
+        if(p1.isEqual(dis1, dis2)){
             System.out.println("Length are equal");
         }
         else
@@ -54,11 +57,11 @@ public class App {
          System.out.println("***********************************************************");
  
         //   Compare the two lines  > , < or == 
-        
-        if(dis1==dis2) {
+        double comp = p1.compare(dis1,dis2) ;
+        if(comp==0) {
             System.out.println("Are Equal");
         }
-        else if (dis1 > dis2){
+        else if (comp>0){
             System.out.println("Line 1 is greater than line 2");
         }
         else{
